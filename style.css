@@ -1,0 +1,141 @@
+/* Set general styles */
+* {
+    color: var(--color-text);
+    font-size: 40px;
+}
+
+/* Define color variables in root */
+:root {
+    --color-primary: #bcc6d6;
+    --color-interactive-elements: #57b89f;
+    --color-text:   #072527;
+    --color-secondary: #393E46;
+    --font-tex-primary: 'Roboto', Geneva, sans-serif;
+}
+
+/* Styles for the document body */
+body {
+    padding-top: 60px;
+    background-color: var(--color-primary);
+    width: 360px;
+    height: auto;
+  
+    margin: 10px;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-height: 100%;
+    max-width: auto;
+
+    margin-right: auto;
+    scroll-margin-top: auto;
+    padding-top: auto;
+}
+
+/* Styles for the header */
+header {
+    background-color: rgba(68, 73, 82, 0);
+    box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    width: 120px;
+}
+
+/* Styles for the "tittle" div */
+.tittle {
+    margin: 10%;
+    margin-bottom: 10%;
+    
+}
+
+.intro-tittle {
+    color: var(--color-interactive-elements);
+}
+
+.introduction-tittle {
+    text-align: center;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.introduction-tittle-animation {
+    visibility: hidden;
+    opacity: 0;
+    animation: hola .10s infinite;
+    animation-iteration-count: 4;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hola {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+    to {
+        visibility: visible;
+        opacity: 1;
+        color: var(--color-interactive-elements);
+    }
+}
+
+.introduction-content {
+    margin-top: 40%;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: 25px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 2px 1px 30px rgba(0, 0, 0, 0.10);
+}
+
+.projects {
+    display: flexbox;
+    direction: column;
+    box-shadow: 2px 1px 30px rgba(0, 0, 0, 0.20);
+    position: relative;
+    top: 120px;
+    padding: 60px;
+    text-align: justify;
+    height: auto;
+}
+
+.projects-tittle {
+    box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 0;
+}
+
+.one-tittle {
+    position: relative;
+    top: 90px;
+    font-size: 35px;
+    text-align: center;
+    font-family: Georgia;
+}
+
+.one-introduction {
+    position: relative;
+    top: 20px;
+    font-size: 20px;
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+img {
+    width: 130px;
+    height: 130px;
+    position: relative;
+    top: 70px;
+    margin-left: 59px;
+    margin-right: auto;
+    box-shadow: 2px 1px 30px rgba(10, 0, 0, 0.20);
+}
+
