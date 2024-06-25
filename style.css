@@ -1,141 +1,104 @@
-/* Set general styles */
-* {
-    color: var(--color-text);
-    font-size: 40px;
+/* Styles for the document body */
+body {
+  margin: 0;
+  background-color: #EDDAA6;
+  font-family: var(--font-tex-primary); /* Asegúrate de aplicar la fuente correctamente */
+  height: 10000px;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+img {
+  width: 70px;
+  height: 70px;
 }
 
 /* Define color variables in root */
 :root {
-    --color-primary: #bcc6d6;
-    --color-interactive-elements: #57b89f;
-    --color-text:   #072527;
-    --color-secondary: #393E46;
-    --font-tex-primary: 'Roboto', Geneva, sans-serif;
-}
-
-/* Styles for the document body */
-body {
-    padding-top: 60px;
-    background-color: var(--color-primary);
-    width: 360px;
-    height: auto;
-  
-    margin: 10px;
+  --color-primary: #324149;
+  --color-interactive-elements: #57b89f;
+  --color-text: #072527;
+  --color-secondary: #393E46;
+  --font-tex-primary: 'Roboto', Geneva, sans-serif;
 }
 
 #root {
-    display: flex;
+  font-size: 15px;
+  
+}
+
+/* Styles for nav */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Valor alto para asegurar que esté por encima de otros elementos */
+  padding: 20px; /* Espaciado interno del menú */
+  background-color: #EDDAA6;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 800px; /* Ancho máximo para el contenido */
+  padding: 0 20px;
+   
+}
+
+.nav-link {
+  margin-right: 20px;
+  text-decoration: none;
+  color: var(--color-primary); /* Color de los enlaces */
+}
+
+.navbar-brand {
+  text-decoration: none;
+  font-style: italic;
+  color: var(--color-primary); /* Color del texto del navbar */
+}
+
+.content{
+    
+    margin-top: 200px;
+    font-size: 4em;
+    text-align: center;
+    font-family: Georgia;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    max-height: 100%;
-    max-width: auto;
-
-    margin-right: auto;
-    scroll-margin-top: auto;
-    padding-top: auto;
-}
-
-/* Styles for the header */
-header {
-    background-color: rgba(68, 73, 82, 0);
-    box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 2px;
-    width: 120px;
-}
-
-/* Styles for the "tittle" div */
-.tittle {
-    margin: 10%;
-    margin-bottom: 10%;
+    
+    
     
 }
 
-.intro-tittle {
-    color: var(--color-interactive-elements);
-}
+ .intro-tittle{
 
-.introduction-tittle {
-    text-align: center;
-    font-size: 30px;
-    font-weight: normal;
-}
+  box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.2);
+ }
+ .intro-name{
 
-.introduction-tittle-animation {
-    visibility: hidden;
-    opacity: 0;
-    animation: hola .10s infinite;
-    animation-iteration-count: 4;
-    animation-fill-mode: forwards;
-}
+  margin-top: 30px;
 
-@keyframes hola {
-    from {
-        visibility: hidden;
-        opacity: 0;
-    }
-    to {
-        visibility: visible;
-        opacity: 1;
-        color: var(--color-interactive-elements);
-    }
-}
+ }
+/* Media Query para pantallas pequeñas */
+@media screen and (max-width: 850px) {
+  .me-auto {
+    display: none;
+  }
 
-.introduction-content {
-    margin-top: 40%;
-    text-align: justify;
-    letter-spacing: 1px;
-    font-size: 25px;
-    padding: 20px;
-    box-sizing: border-box;
-    box-shadow: 2px 1px 30px rgba(0, 0, 0, 0.10);
-}
+  .navbar-brand {
+    display: none;
+  }
 
-.projects {
-    display: flexbox;
-    direction: column;
-    box-shadow: 2px 1px 30px rgba(0, 0, 0, 0.20);
-    position: relative;
-    top: 120px;
-    padding: 60px;
-    text-align: justify;
-    height: auto;
+  .content{
+    
+    margin-top: 80px;
+    font-size: 3em;
+    
+    
+    
 }
-
-.projects-tittle {
-    box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.2);
-    background-color: var(--color-primary);
-    color: var(--color-text);
-    text-align: center;
-    padding: 10px;
-    padding-bottom: 0;
 }
-
-.one-tittle {
-    position: relative;
-    top: 90px;
-    font-size: 35px;
-    text-align: center;
-    font-family: Georgia;
-}
-
-.one-introduction {
-    position: relative;
-    top: 20px;
-    font-size: 20px;
-    text-align: justify;
-    font-family: 'Courier New', Courier, monospace;
-    padding: 10px;
-    margin-bottom: 50px;
-}
-
-img {
-    width: 130px;
-    height: 130px;
-    position: relative;
-    top: 70px;
-    margin-left: 59px;
-    margin-right: auto;
-    box-shadow: 2px 1px 30px rgba(10, 0, 0, 0.20);
-}
-
