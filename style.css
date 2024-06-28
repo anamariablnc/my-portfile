@@ -1,43 +1,45 @@
-/* Styles for the document body */
 body {
-  margin: 0;
-  background-color: #EDDAA6;
-  font-family: var(--font-tex-primary); /* Asegúrate de aplicar la fuente correctamente */
-  height: 10000px;
+  background-color: #0d2030;
+  height: auto;
+   
 }
 
-a {
-  color: var(--color-primary);
-}
-
-img {
-  width: 70px;
-  height: 70px;
-}
-
-/* Define color variables in root */
 :root {
-  --color-primary: #324149;
+  --color-primary: #000000;
   --color-interactive-elements: #57b89f;
   --color-text: #072527;
   --color-secondary: #393E46;
-  --font-tex-primary: 'Roboto', Geneva, sans-serif;
+  
+  --space--content: 2em;
+  --size-font-tittle: 4em;
+  --size-font-subtitle: 1.9em;
+  --size-font-content: 1.3em;
 }
 
 #root {
-  font-size: 15px;
-  
+  margin-left: 12.5em;
+  margin-right: 12.5em;
 }
 
-/* Styles for nav */
 .menu {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Valor alto para asegurar que esté por encima de otros elementos */
-  padding: 20px; /* Espaciado interno del menú */
-  background-color: #EDDAA6;
+  z-index: 1000;
+  padding: 20px;
+  background-color: #0d2030;
+}
+
+.social-media {
+  position: fixed;
+  margin-left: 1300px; /* Modificado para usar % */
+  margin-top: 480px;
+}
+
+.social-media img {
+  width: 40px;
+  height: 40px;
 }
 
 .container {
@@ -45,46 +47,263 @@ img {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  max-width: 800px; /* Ancho máximo para el contenido */
+  max-width: 800px;
   padding: 0 20px;
-   
 }
 
 .nav-link {
   margin-right: 20px;
   text-decoration: none;
-  color: var(--color-primary); /* Color de los enlaces */
+  color: #C1C2AD;
+  font-size: 20px;
+  font-family: sans-serif;
 }
 
 .navbar-brand {
   text-decoration: none;
   font-style: italic;
-  color: var(--color-primary); /* Color del texto del navbar */
+  color: #C1C2AD;
 }
 
-.content{
-    
-    margin-top: 200px;
-    font-size: 4em;
-    text-align: center;
-    font-family: Georgia;
-    justify-content: center;
-    
-    
-    
+.content {
+  margin-top: 12em; /* Ajustado para usar em */
+  text-align: center;
+  justify-content: center;
 }
 
- .intro-tittle{
-
+.intro-tittle {
+  font-size: var(--size-font-tittle);
   box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.2);
- }
- .intro-name{
+  font-weight: bolder;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  color: #C1C2AD;
+}
 
-  margin-top: 30px;
+.intro-me {
+  color: #C1C2AD;
+  font-size: var(--size-font-subtitle);
+  margin-top: 5em; /* Ajustado para usar em */
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
 
- }
+.intro-name {
+  color: #B5A4A3;
+}
+
+.intro-content {
+  margin-top: 3em; /* Ajustado para usar em */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+  font-size: var(--size-font-content);
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  color: #C1C2AD;
+}
+
+#about {
+  margin-top: 0; /* Eliminado margin-top para reajustar */
+  margin-right: 18.75em;
+}
+
+.section-header {
+  display: flex;
+  font-size: var(--size-font-subtitle);
+  font-weight: bolder;
+  color: #C1C2AD;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  margin-top: 12em; /* Ajustado para usar em */
+}
+
+.about-content {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  color: #C1C2AD;
+}
+
+.about-description {
+  display: block;
+  text-align: justify;
+  margin-top: 1.5em; /* Ajustado para usar em */
+  font-size: var(--size-font-content);
+}
+
+.skills {
+  margin-top: 10em; /* Ajustado para usar em */
+  font-size: var(--size-font-subtitle);
+  display: flex;
+  font-weight: bold;
+  color: #C1C2AD;
+}
+
+.resalt {
+  color: #B5A4A3;
+}
+
+.habilidades {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 20px;
+  margin-top: 4em; /* Ajustado para usar em */
+  justify-items: left;
+}
+
+.habilidades-img {
+  width: 100%;
+  height: auto;
+}
+
+.habilidades .habilidades-img:last-child {
+  margin-top: -2em; /* Ajustado para usar em */
+  width: 150px;
+  height: 150px;
+}
+
+#projects {
+  margin-top: 12em; /* Ajustado para usar em */
+}
+
+.projects-title {
+  color: #C1C2AD;
+  font-weight: bolder;
+  font-size: var(--size-font-subtitle);
+  margin-top: 5em; /* Ajustado para usar em */
+  display: flex;
+  margin-bottom: 1em; /* Ajustado para usar em */
+}
+
+#projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.projects-card {
+  width: 300px;
+  max-width: 100%;
+  box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 3.125em; /* Ajustado para usar em */
+}
+
+.header-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 10px;
+  background-color: #102435;
+}
+
+.header-card img {
+  width: 30px;
+  height: 30px;
+}
+
+.title-card {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: var(--size-font-subtitle);
+  font-weight: bold;
+  color: #C1C2AD;
+}
+
+.foto-card {
+  margin: 1em; /* Ajustado para usar em */
+  box-shadow: 7px 10px 10px rgba(0, 0, 0, 0.2);
+  background-color: #102435;
+}
+
+.foto-card img{
+
+  width: auto;
+   
+}
+.information-card {
+  margin-top: 2em; /* Ajustado para usar em */
+  font-size: var(--size-font-content);
+  color: #C1C2AD;
+  font-weight: 400;
+}
+
+.footer-container {
+  margin-top: 10em; /* Ajustado para usar em */
+  margin-bottom: 5em; /* Ajustado para usar em */
+}
+
+.made {
+  margin-top: 12em; /* Ajustado para usar em */
+  color: #C1C2AD;
+  font-size: var(--size-font-content) / 2;
+   
+}
+
+.reserve {
+  margin-top: 0.5em; /* Ajustado para usar em */
+  color: #C1C2AD;
+  font-size: var(--size-font-content) / 2;
+   
+}
+
+
 /* Media Query para pantallas pequeñas */
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 480px)  {
+
+  body {
+    min-width: 360px; /* Establece el ancho mínimo del body */
+     /* Evita que la página tenga barras de desplazamiento horizontales */
+  }
+  /*font*/
+
+  .intro-tittle {
+    font-size: var(--size-font-tittle);
+  }
+
+  .intro-me {
+    font-size: var(--size-font-subtitle)-1em;
+  }
+
+  .intro-content {
+    font-size: var(--size-font-content)-0.5em;
+  }
+  
+  .content {
+    margin-top: 8em; /* Ajustado para usar em */
+  }
+
+  .intro-me {
+    margin-top: 4em; /* Ajustado para usar em */
+    
+  }
+  .intro-content {
+     
+    margin-top: 8em;
+  }
+  
+  .section-header{
+
+    margin-top: 6em;
+  }
+
+  .habilidades-img {
+    width: 75%;
+    height: auto;
+  }
+
+  .reserve{
+
+    font-size: 80%;
+  }
+
+  .made{
+
+    font-size: 80%;
+  }
+  #root{
+
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+  }
+  
+
   .me-auto {
     display: none;
   }
@@ -92,13 +311,316 @@ img {
   .navbar-brand {
     display: none;
   }
+ 
+ 
+.social-media{
 
-  .content{
-    
-    margin-top: 80px;
-    font-size: 3em;
-    
-    
-    
+  position:fixed;
+  background-color: #162c3d;
+ 
+} 
+
+#about{
+
+  margin-top: 10px;
+  margin-left: 3.125em;
+  margin-right: 3.125em;
+
 }
+:root {
+    --size-font-tittle: 3em; /* Reducción del tamaño de fuente para títulos */
+    --size-font-subtitle: 1.5em; /* Reducción del tamaño de fuente para subtítulos */
+    --size-font-content: 1em; /* Reducción del tamaño de fuente para contenido */
+  }
+  
+  
 }
+ 
+/* Media Query para pantallas medianas */
+@media screen and (max-width: 767px)  {
+
+  body {
+    min-width:  480px; /* Establece el ancho mínimo del body */
+     /* Evita que la página tenga barras de desplazamiento horizontales */
+  }
+  /*font*/
+
+  .intro-tittle {
+    font-size: var(--size-font-tittle);
+  }
+
+  .intro-me {
+    font-size: var(--size-font-subtitle) ;
+  }
+
+  .intro-content {
+    font-size: var(--size-font-content) ;
+  }
+  
+  .content {
+    margin-top: 15em; /* Ajustado para usar em */
+  }
+
+  .intro-me {
+    margin-top: 9em; /* Ajustado para usar em */
+    
+  }
+  .intro-content {
+     
+    margin-top: 11em;
+  }
+  
+  .section-header{
+
+    margin-top: 6em;
+  }
+
+  .habilidades-img {
+    width: 75%;
+    height: auto;
+  }
+
+  .reserve{
+
+    font-size: 80%;
+  }
+
+  .made{
+
+    font-size: 80%;
+  }
+  #root{
+
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+  }
+  
+
+  .me-auto {
+    display: none;
+  }
+
+  .navbar-brand {
+    display: none;
+  }
+ 
+ 
+.social-media{
+
+  position:fixed;
+  background-color: #162c3d;
+ 
+} 
+
+#about{
+
+  margin-top: 10px;
+  margin-left: 3.125em;
+ @media screen and (max-width: 1366px)  {
+
+  body {
+    min-width:  767px; /* Establece el ancho mínimo del body */
+     /* Evita que la página tenga barras de desplazamiento horizontales */
+  }
+  /*font*/
+
+  .intro-tittle {
+    font-size: var(--size-font-tittle);
+  }
+
+  .intro-me {
+    font-size: var(--size-font-subtitle) ;
+  }
+
+  .intro-content {
+    font-size: var(--size-font-content) ;
+  }
+  
+  .content {
+    margin-top: 10em; /* Ajustado para usar em */
+  }
+
+  .intro-me {
+    margin-top: 8em; /* Ajustado para usar em */
+    
+  }
+  .intro-content {
+     
+    margin-top: 5em;
+  }
+  
+  .section-header{
+
+    margin-top: 18em;
+  }
+  
+  .skills{
+
+    margin-top: 15em;
+  }
+  .habilidades-img {
+    width: 75%;
+    height: auto;
+  }
+
+  .reserve{
+
+    font-size: 80%;
+  }
+
+  .made{
+
+    font-size: 80%;
+  }
+  #root{
+
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+  }
+  
+
+  
+ 
+.social-media{
+
+  position:fixed;
+   
+ 
+} 
+
+#about{
+
+  margin-top: 10px;
+  margin-left: 3.125em;
+  margin-right: 3.125em;
+
+}
+#root{
+
+  margin-left: 4.5em;
+  margin-right: 4.5em;
+  
+  }
+:root {
+    --size-font-tittle: 4em; /* Reducción del tamaño de fuente para títulos */
+    --size-font-subtitle: 1.5em; /* Reducción del tamaño de fuente para subtítulos */
+    --size-font-content: 1.5em; /* Reducción del tamaño de fuente para contenido */
+  }
+   
+  
+}
+
+}
+#root{
+
+  margin-left: 4.5em;
+  margin-right: 4.5em;
+  }
+:root {
+    --size-font-tittle: 4em; /* Reducción del tamaño de fuente para títulos */
+    --size-font-subtitle: 1.5em; /* Reducción del tamaño de fuente para subtítulos */
+    --size-font-content: 1.5em; /* Reducción del tamaño de fuente para contenido */
+  }
+  
+  
+}
+
+/*tablets*/
+
+@media screen and (max-width: 1366px)  {
+
+  body {
+    min-width:  767px; /* Establece el ancho mínimo del body */
+     /* Evita que la página tenga barras de desplazamiento horizontales */
+  }
+  /*font*/
+
+  .intro-tittle {
+    font-size: var(--size-font-tittle);
+  }
+
+  .intro-me {
+    font-size: var(--size-font-subtitle) ;
+  }
+
+  .intro-content {
+    font-size: var(--size-font-content) ;
+  }
+  
+  .content {
+    margin-top: 10em; /* Ajustado para usar em */
+  }
+
+  .intro-me {
+    margin-top: 8em; /* Ajustado para usar em */
+    
+  }
+  .intro-content {
+     
+    margin-top: 5em;
+  }
+  
+  .section-header{
+
+    margin-top: 18em;
+  }
+  
+  .skills{
+
+    margin-top: 15em;
+  }
+  .habilidades-img {
+    width: 75%;
+    height: auto;
+  }
+
+  .reserve{
+
+    font-size: 80%;
+  }
+
+  .made{
+
+    font-size: 80%;
+  }
+  #root{
+
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+  }
+  
+
+  
+ 
+.social-media{
+
+  position:fixed;
+   
+ 
+} 
+
+#about{
+
+  margin-top: 10px;
+  margin-left: 3.125em;
+  margin-right: 18.75px;
+
+}
+#root{
+
+  margin-left: 4.5em;
+  margin-right: 4.5em;
+  
+  }
+:root {
+    --size-font-tittle: 4em; /* Reducción del tamaño de fuente para títulos */
+    --size-font-subtitle: 1.5em; /* Reducción del tamaño de fuente para subtítulos */
+    --size-font-content: 1.5em; /* Reducción del tamaño de fuente para contenido */
+  }
+   
+  
+}
+
+
+
+ 
